@@ -50,7 +50,7 @@ const Dashboard = () => (
                       {c.status === "approved" ? (
                         <CheckCircle className="h-5 w-5 text-accent shrink-0" />
                       ) : (
-                        <AlertTriangle className="h-5 w-5 text-yellow-500 shrink-0" />
+                        <AlertTriangle className="h-5 w-5 text-accent shrink-0" />
                       )}
                       <div>
                         <p className="text-sm font-medium">{c.reason}</p>
