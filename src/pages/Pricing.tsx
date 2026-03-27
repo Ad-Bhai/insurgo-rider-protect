@@ -5,30 +5,38 @@ import { CheckCircle, Star } from "lucide-react";
 
 const plans = [
   {
-    name: "Basic",
-    price: "₹49",
+    name: "Lite Shield",
+    price: "₹29",
     period: "/week",
-    desc: "Essential protection for part-time riders",
-    features: ["Rain disruption coverage", "Up to ₹500/week payout", "Manual claim submission", "Email support"],
+    desc: "Best for: Part-time riders",
+    features: ["2 disruptions / week", "₹200 per event", "₹400 weekly max", "Rain, Heat, AQI protection", "Auto payouts"],
     popular: false,
   },
   {
-    name: "Standard",
-    price: "₹99",
+    name: "Smart Shield",
+    price: "₹49",
     period: "/week",
-    desc: "Complete protection for full-time riders",
-    features: ["All weather disruptions", "Up to ₹1,500/week payout", "Automatic claim detection", "Traffic & restriction coverage", "Priority support", "Instant wallet credit"],
+    desc: "Best for: Regular riders",
+    features: ["4 disruptions / week", "₹300 per event", "₹1,200 weekly max", "Multi-event protection", "Faster payouts", "Streak Bonus"],
     popular: true,
   },
   {
-    name: "Premium",
-    price: "₹149",
+    name: "Pro Shield",
+    price: "₹99",
     period: "/week",
-    desc: "Maximum coverage for power riders",
-    features: ["Everything in Standard", "Up to ₹3,000/week payout", "Equipment damage protection", "24/7 dedicated support", "Family emergency cover", "Bonus: accident insurance"],
+    desc: "Best for: Full-time earners",
+    features: ["1 payout per day", "₹400 per event", "₹2,400 weekly max", "Priority payouts", "Full coverage", "Streak Bonus"],
     popular: false,
   },
 ];
+
+const flexPlan = {
+  name: "Daily Flex Plan",
+  price: "₹5",
+  period: "/day",
+  desc: "Only charged on work days — perfect for flexible workers",
+  features: ["₹150 payout per day", "Pay only when active", "No weekly commitment", "Ideal for part-time gig workers"],
+};
 
 const Pricing = () => (
   <div className="min-h-screen pt-24">
@@ -79,6 +87,37 @@ const Pricing = () => (
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Daily Flex Plan */}
+        <AnimatedSection className="max-w-2xl mx-auto mt-12">
+          <div className="relative p-8 rounded-2xl border border-accent/30 bg-card">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+              <div>
+                <h3 className="font-display text-lg font-semibold mb-1">{flexPlan.name}</h3>
+                <p className="text-sm text-muted-foreground mb-3">{flexPlan.desc}</p>
+                <ul className="space-y-2">
+                  {flexPlan.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="text-center sm:text-right shrink-0">
+                <div className="flex items-baseline gap-1 justify-center sm:justify-end">
+                  <span className="text-4xl font-display font-bold">{flexPlan.price}</span>
+                  <span className="text-muted-foreground">{flexPlan.period}</span>
+                </div>
+                <Link to="/signup">
+                  <Button variant="outline" className="mt-4 w-full sm:w-auto" size="lg">
+                    Get Started
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   </div>
