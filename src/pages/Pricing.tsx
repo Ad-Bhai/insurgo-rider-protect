@@ -87,6 +87,37 @@ const Pricing = () => (
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Daily Flex Plan */}
+        <AnimatedSection className="max-w-2xl mx-auto mt-12">
+          <div className="relative p-8 rounded-2xl border border-accent/30 bg-card">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+              <div>
+                <h3 className="font-display text-lg font-semibold mb-1">{flexPlan.name}</h3>
+                <p className="text-sm text-muted-foreground mb-3">{flexPlan.desc}</p>
+                <ul className="space-y-2">
+                  {flexPlan.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="text-center sm:text-right shrink-0">
+                <div className="flex items-baseline gap-1 justify-center sm:justify-end">
+                  <span className="text-4xl font-display font-bold">{flexPlan.price}</span>
+                  <span className="text-muted-foreground">{flexPlan.period}</span>
+                </div>
+                <Link to="/signup">
+                  <Button variant="outline" className="mt-4 w-full sm:w-auto" size="lg">
+                    Get Started
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   </div>
