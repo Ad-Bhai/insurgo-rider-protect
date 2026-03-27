@@ -5,30 +5,38 @@ import { CheckCircle, Star } from "lucide-react";
 
 const plans = [
   {
-    name: "Basic",
-    price: "₹49",
+    name: "Lite Shield",
+    price: "₹29",
     period: "/week",
-    desc: "Essential protection for part-time riders",
-    features: ["Rain disruption coverage", "Up to ₹500/week payout", "Manual claim submission", "Email support"],
+    desc: "Best for: Part-time riders",
+    features: ["2 disruptions / week", "₹200 per event", "₹400 weekly max", "Rain, Heat, AQI protection", "Auto payouts"],
     popular: false,
   },
   {
-    name: "Standard",
-    price: "₹99",
+    name: "Smart Shield",
+    price: "₹49",
     period: "/week",
-    desc: "Complete protection for full-time riders",
-    features: ["All weather disruptions", "Up to ₹1,500/week payout", "Automatic claim detection", "Traffic & restriction coverage", "Priority support", "Instant wallet credit"],
+    desc: "Best for: Regular riders",
+    features: ["4 disruptions / week", "₹300 per event", "₹1,200 weekly max", "Multi-event protection", "Faster payouts", "Streak Bonus"],
     popular: true,
   },
   {
-    name: "Premium",
-    price: "₹149",
+    name: "Pro Shield",
+    price: "₹99",
     period: "/week",
-    desc: "Maximum coverage for power riders",
-    features: ["Everything in Standard", "Up to ₹3,000/week payout", "Equipment damage protection", "24/7 dedicated support", "Family emergency cover", "Bonus: accident insurance"],
+    desc: "Best for: Full-time earners",
+    features: ["1 payout per day", "₹400 per event", "₹2,400 weekly max", "Priority payouts", "Full coverage", "Streak Bonus"],
     popular: false,
   },
 ];
+
+const flexPlan = {
+  name: "Daily Flex Plan",
+  price: "₹5",
+  period: "/day",
+  desc: "Only charged on work days — perfect for flexible workers",
+  features: ["₹150 payout per day", "Pay only when active", "No weekly commitment", "Ideal for part-time gig workers"],
+};
 
 const Pricing = () => (
   <div className="min-h-screen pt-24">
