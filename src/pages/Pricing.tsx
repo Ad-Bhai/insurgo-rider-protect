@@ -78,7 +78,7 @@ const Pricing = () => (
                     </li>
                   ))}
                 </ul>
-                <Link to="/signup">
+                <Link to={`/payment?plan=${plan.name === "Lite Shield" ? "lite" : plan.name === "Smart Shield" ? "smart" : "pro"}`}>
                   <Button variant={plan.popular ? "hero" : "outline"} className="w-full" size="lg">
                     Get Started
                   </Button>
@@ -109,7 +109,7 @@ const Pricing = () => (
                   <span className="text-4xl font-display font-bold">{flexPlan.price}</span>
                   <span className="text-muted-foreground">{flexPlan.period}</span>
                 </div>
-                <Link to="/signup">
+                <Link to="/payment?plan=flex">
                   <Button variant="outline" className="mt-4 w-full sm:w-auto" size="lg">
                     Get Started
                   </Button>
