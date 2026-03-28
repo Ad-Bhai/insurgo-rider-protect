@@ -18,7 +18,7 @@ const Navbar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220_20%_15%)] text-white backdrop-blur-2xl border-b border-white/10">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
           <Shield className="h-7 w-7 text-primary" />
@@ -33,8 +33,8 @@ const Navbar = () => {
               to={l.to}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 location.pathname === l.to
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  ? "text-white bg-white/15"
+                  : "text-white/70 hover:text-white hover:bg-white/10"
               }`}
             >
               {l.label}
@@ -60,14 +60,14 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden glass border-t border-border animate-fade-in">
+        <div className="md:hidden bg-[hsl(220_20%_15%)] border-t border-white/10 animate-fade-in">
           <div className="container py-4 flex flex-col gap-2">
             {navLinks.map((l) => (
               <Link
@@ -76,8 +76,8 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                   location.pathname === l.to
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-white bg-white/15"
+                    : "text-white/70 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {l.label}
