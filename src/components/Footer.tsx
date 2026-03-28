@@ -30,8 +30,8 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-semibold text-sm mb-3 text-white">Legal</h4>
           <div className="flex flex-col gap-2 text-sm text-white/60">
-            <span className="cursor-pointer hover:text-white transition-colors">Privacy Policy</span>
-            <span className="cursor-pointer hover:text-white transition-colors">Terms of Service</span>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
