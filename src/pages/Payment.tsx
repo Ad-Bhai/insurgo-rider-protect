@@ -74,7 +74,7 @@ const Payment = () => {
               <div className="p-4 rounded-xl bg-primary/5 border border-primary/20 mb-4">
                 <p className="font-display font-bold text-primary text-lg">{plan.name}</p>
                 <div className="flex items-baseline gap-1 mt-1">
-                  <span className="text-3xl font-display font-bold">{plan.price}</span>
+                  <span className="text-3xl font-display font-bold text-foreground">{plan.price}</span>
                   <span className="text-muted-foreground text-sm">{plan.period}</span>
                 </div>
               </div>
