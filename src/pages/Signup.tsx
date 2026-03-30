@@ -22,7 +22,7 @@ const Signup = () => {
         </div>
         <form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-card border border-border space-y-5">
           <div className="space-y-2">
-            <label className="text-sm font-medium">Full Name</label>
+            <label className="text-sm font-medium text-foreground">Full Name</label>
             <div className="relative">
               <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input placeholder="Your full name" required className="pl-10 bg-secondary border-border" />
