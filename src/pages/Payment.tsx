@@ -130,7 +130,7 @@ const Payment = () => {
               <form onSubmit={handlePay} className="space-y-4">
                 {method === "upi" ? (
                   <div>
-                    <label className="text-sm font-medium mb-1.5 block">UPI ID</label>
+                    <label className="text-sm font-medium mb-1.5 block text-foreground">UPI ID</label>
                     <Input
                       placeholder="yourname@upi"
                       value={upiId}
