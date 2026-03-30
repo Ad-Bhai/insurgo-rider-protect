@@ -29,7 +29,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-medium">Email</label>
+            <label className="text-sm font-medium text-foreground">Email</label>
             <div className="relative">
               <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input type="email" placeholder="rider@email.com" required className="pl-10 bg-secondary border-border" />
