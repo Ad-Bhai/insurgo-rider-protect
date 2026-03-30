@@ -31,7 +31,7 @@ const testimonials = [
 ];
 
 const Index = () => (
-  <div className="min-h-screen bg-white">
+  <div className="min-h-screen bg-background">
     {/* Hero */}
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       <img src={heroImage} alt="Delivery rider in rain" className="absolute inset-0 w-full h-full object-cover" />
@@ -44,7 +44,7 @@ const Index = () => (
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
             Deliver Without <span className="text-gradient">Worry</span>
           </h1>
-          <p className="text-lg sm:text-xl text-foreground font-bold mb-8 max-w-lg">
+          <p className="text-lg sm:text-xl text-foreground font-bold mb-8 max-w-lg dark:text-white">
             Get weekly insurance for failed deliveries due to rain, traffic, roadblocks, or unexpected issues.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -79,7 +79,7 @@ const Index = () => (
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <p.icon className="h-5 w-5 text-destructive" />
-                    <h3 className="font-display font-semibold">{p.title}</h3>
+                    <h3 className="font-display font-semibold text-foreground">{p.title}</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">{p.desc}</p>
                 </div>
@@ -143,7 +143,7 @@ const Index = () => (
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <w.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-display font-semibold mb-2">{w.title}</h3>
+                <h3 className="font-display font-semibold mb-2 text-foreground">{w.title}</h3>
                 <p className="text-sm text-muted-foreground">{w.desc}</p>
               </div>
             </AnimatedSection>
@@ -179,7 +179,7 @@ const Index = () => (
             <AnimatedSection key={s.step} delay={i * 0.15}>
               <div className="text-center p-8 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300">
                 <div className="text-5xl font-display font-bold text-gradient mb-4">{s.step}</div>
-                <h3 className="font-display text-xl font-semibold mb-3">{s.title}</h3>
+                <h3 className="font-display text-xl font-semibold mb-3 text-foreground">{s.title}</h3>
                 <p className="text-muted-foreground">{s.desc}</p>
               </div>
             </AnimatedSection>

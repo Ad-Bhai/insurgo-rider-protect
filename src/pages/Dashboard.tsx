@@ -26,7 +26,7 @@ const Dashboard = () => (
                   <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">{s.label}</span>
                   <s.icon className={`h-5 w-5 ${s.color}`} />
                 </div>
-                <p className="text-2xl font-display font-bold">{s.value}</p>
+                <p className="text-2xl font-display font-bold text-foreground">{s.value}</p>
                 <p className="text-xs text-muted-foreground mt-1">{s.sub}</p>
               </div>
             </AnimatedSection>
@@ -53,7 +53,7 @@ const Dashboard = () => (
                         <AlertTriangle className="h-5 w-5 text-accent shrink-0" />
                       )}
                       <div>
-                        <p className="text-sm font-medium">{c.reason}</p>
+                        <p className="text-sm font-medium text-foreground">{c.reason}</p>
                         <p className="text-xs text-muted-foreground">{c.date}, 2026</p>
                       </div>
                     </div>

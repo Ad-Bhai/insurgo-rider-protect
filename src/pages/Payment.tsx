@@ -74,7 +74,7 @@ const Payment = () => {
               <div className="p-4 rounded-xl bg-primary/5 border border-primary/20 mb-4">
                 <p className="font-display font-bold text-primary text-lg">{plan.name}</p>
                 <div className="flex items-baseline gap-1 mt-1">
-                  <span className="text-3xl font-display font-bold">{plan.price}</span>
+                  <span className="text-3xl font-display font-bold text-foreground">{plan.price}</span>
                   <span className="text-muted-foreground text-sm">{plan.period}</span>
                 </div>
               </div>
@@ -82,13 +82,13 @@ const Payment = () => {
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm">
                     <CheckCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-                    <span>{f}</span>
+                    <span className="text-foreground">{f}</span>
                   </li>
                 ))}
               </ul>
               <div className="border-t border-border pt-4 flex justify-between items-center">
                 <span className="text-sm text-muted-foreground">Total due today</span>
-                <span className="font-display font-bold text-lg">{plan.price}</span>
+                <span className="font-display font-bold text-lg text-foreground">{plan.price}</span>
               </div>
             </div>
           </AnimatedSection>
@@ -130,7 +130,7 @@ const Payment = () => {
               <form onSubmit={handlePay} className="space-y-4">
                 {method === "upi" ? (
                   <div>
-                    <label className="text-sm font-medium mb-1.5 block">UPI ID</label>
+                    <label className="text-sm font-medium mb-1.5 block text-foreground">UPI ID</label>
                     <Input
                       placeholder="yourname@upi"
                       value={upiId}
@@ -142,7 +142,7 @@ const Payment = () => {
                 ) : (
                   <>
                     <div>
-                      <label className="text-sm font-medium mb-1.5 block">Cardholder Name</label>
+                      <label className="text-sm font-medium mb-1.5 block text-foreground">Cardholder Name</label>
                       <Input
                         placeholder="Full name on card"
                         value={name}
@@ -151,7 +151,7 @@ const Payment = () => {
                       />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-1.5 block">Card Number</label>
+                      <label className="text-sm font-medium mb-1.5 block text-foreground">Card Number</label>
                       <Input
                         placeholder="1234 5678 9012 3456"
                         value={cardNumber}
@@ -162,7 +162,7 @@ const Payment = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="text-sm font-medium mb-1.5 block">Expiry</label>
+                        <label className="text-sm font-medium mb-1.5 block text-foreground">Expiry</label>
                         <Input
                           placeholder="MM/YY"
                           value={expiry}
@@ -172,7 +172,7 @@ const Payment = () => {
                         />
                       </div>
                       <div>
-                        <label className="text-sm font-medium mb-1.5 block">CVV</label>
+                        <label className="text-sm font-medium mb-1.5 block text-foreground">CVV</label>
                         <Input
                           type="password"
                           placeholder="•••"

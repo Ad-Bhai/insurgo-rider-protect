@@ -63,10 +63,10 @@ const Pricing = () => (
                   </div>
                 )}
                 <div className="mb-6">
-                  <h3 className="font-display text-lg font-semibold mb-1">{plan.name}</h3>
+                  <h3 className="font-display text-lg font-semibold mb-1 text-foreground">{plan.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{plan.desc}</p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-display font-bold">{plan.price}</span>
+                    <span className="text-4xl font-display font-bold text-foreground">{plan.price}</span>
                     <span className="text-muted-foreground">{plan.period}</span>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ const Pricing = () => (
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
                       <CheckCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-                      <span>{f}</span>
+                      <span className="text-foreground">{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -93,20 +93,20 @@ const Pricing = () => (
           <div className="relative p-8 rounded-2xl border border-accent/30 bg-card">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
               <div>
-                <h3 className="font-display text-lg font-semibold mb-1">{flexPlan.name}</h3>
+                <h3 className="font-display text-lg font-semibold mb-1 text-foreground">{flexPlan.name}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{flexPlan.desc}</p>
                 <ul className="space-y-2">
                   {flexPlan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
                       <CheckCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-                      <span>{f}</span>
+                      <span className="text-foreground">{f}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="text-center sm:text-right shrink-0">
                 <div className="flex items-baseline gap-1 justify-center sm:justify-end">
-                  <span className="text-4xl font-display font-bold">{flexPlan.price}</span>
+                  <span className="text-4xl font-display font-bold text-foreground">{flexPlan.price}</span>
                   <span className="text-muted-foreground">{flexPlan.period}</span>
                 </div>
                 <Link to="/payment?plan=flex">

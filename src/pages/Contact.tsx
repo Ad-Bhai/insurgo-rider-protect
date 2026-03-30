@@ -57,7 +57,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">{c.label}</p>
-                      <p className="font-medium">{c.value}</p>
+                      <p className="font-medium text-foreground">{c.value}</p>
                     </div>
                   </div>
                 ))}
