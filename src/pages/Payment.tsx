@@ -88,7 +88,7 @@ const Payment = () => {
               </ul>
               <div className="border-t border-border pt-4 flex justify-between items-center">
                 <span className="text-sm text-muted-foreground">Total due today</span>
-                <span className="font-display font-bold text-lg">{plan.price}</span>
+                <span className="font-display font-bold text-lg text-foreground">{plan.price}</span>
               </div>
             </div>
           </AnimatedSection>
