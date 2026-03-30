@@ -106,7 +106,7 @@ const Pricing = () => (
               </div>
               <div className="text-center sm:text-right shrink-0">
                 <div className="flex items-baseline gap-1 justify-center sm:justify-end">
-                  <span className="text-4xl font-display font-bold">{flexPlan.price}</span>
+                  <span className="text-4xl font-display font-bold text-foreground">{flexPlan.price}</span>
                   <span className="text-muted-foreground">{flexPlan.period}</span>
                 </div>
                 <Link to="/payment?plan=flex">

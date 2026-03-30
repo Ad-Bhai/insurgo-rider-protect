@@ -179,7 +179,7 @@ const Index = () => (
             <AnimatedSection key={s.step} delay={i * 0.15}>
               <div className="text-center p-8 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300">
                 <div className="text-5xl font-display font-bold text-gradient mb-4">{s.step}</div>
-                <h3 className="font-display text-xl font-semibold mb-3">{s.title}</h3>
+                <h3 className="font-display text-xl font-semibold mb-3 text-foreground">{s.title}</h3>
                 <p className="text-muted-foreground">{s.desc}</p>
               </div>
             </AnimatedSection>

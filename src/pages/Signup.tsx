@@ -36,7 +36,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-medium">Password</label>
+            <label className="text-sm font-medium text-foreground">Password</label>
             <div className="relative">
               <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input type="password" placeholder="••••••••" required className="pl-10 bg-secondary border-border" />

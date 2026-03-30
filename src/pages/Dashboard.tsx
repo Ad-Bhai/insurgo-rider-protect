@@ -53,7 +53,7 @@ const Dashboard = () => (
                         <AlertTriangle className="h-5 w-5 text-accent shrink-0" />
                       )}
                       <div>
-                        <p className="text-sm font-medium">{c.reason}</p>
+                        <p className="text-sm font-medium text-foreground">{c.reason}</p>
                         <p className="text-xs text-muted-foreground">{c.date}, 2026</p>
                       </div>
                     </div>

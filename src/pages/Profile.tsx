@@ -41,7 +41,7 @@ const Profile = () => {
                   <item.icon className="h-5 w-5 text-primary shrink-0" />
                   <div>
                     <p className="text-xs text-muted-foreground">{item.label}</p>
-                    <p className="text-sm font-medium">{item.value}</p>
+                    <p className="text-sm font-medium text-foreground">{item.value}</p>
                   </div>
                 </div>
               ))}
