@@ -44,7 +44,7 @@ const Index = () => (
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
             Deliver Without <span className="text-gradient">Worry</span>
           </h1>
-          <p className="text-lg sm:text-xl text-foreground font-semibold mb-8 max-w-lg">
+          <p className="text-lg sm:text-xl text-foreground font-bold mb-8 max-w-lg">
             Get weekly insurance for failed deliveries due to rain, traffic, roadblocks, or unexpected issues.
           </p>
           <div className="flex flex-wrap gap-4">
