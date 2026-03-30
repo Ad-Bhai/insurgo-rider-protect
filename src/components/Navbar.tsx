@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Shield, User } from "lucide-react";
+import { Menu, X, Shield, User, Sun, Moon } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 
 const navLinks = [
