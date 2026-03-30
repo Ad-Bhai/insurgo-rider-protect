@@ -93,7 +93,7 @@ const Pricing = () => (
           <div className="relative p-8 rounded-2xl border border-accent/30 bg-card">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
               <div>
-                <h3 className="font-display text-lg font-semibold mb-1">{flexPlan.name}</h3>
+                <h3 className="font-display text-lg font-semibold mb-1 text-foreground">{flexPlan.name}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{flexPlan.desc}</p>
                 <ul className="space-y-2">
                   {flexPlan.features.map((f) => (
