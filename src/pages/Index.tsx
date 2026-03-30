@@ -143,7 +143,7 @@ const Index = () => (
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <w.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-display font-semibold mb-2">{w.title}</h3>
+                <h3 className="font-display font-semibold mb-2 text-foreground">{w.title}</h3>
                 <p className="text-sm text-muted-foreground">{w.desc}</p>
               </div>
             </AnimatedSection>
