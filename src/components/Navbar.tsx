@@ -106,6 +106,13 @@ const Navbar = () => {
                 {l.label}
               </Link>
             ))}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center gap-2 px-4 py-3 rounded-lg text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {isDark ? "Light Mode" : "Dark Mode"}
+            </button>
             <div className="flex gap-3 mt-2">
               {isLoggedIn ? (
                 <Link to="/profile" className="flex-1" onClick={() => setOpen(false)}>
