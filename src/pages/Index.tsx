@@ -79,7 +79,7 @@ const Index = () => (
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <p.icon className="h-5 w-5 text-destructive" />
-                    <h3 className="font-display font-semibold">{p.title}</h3>
+                    <h3 className="font-display font-semibold text-foreground">{p.title}</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">{p.desc}</p>
                 </div>
