@@ -31,7 +31,7 @@ const testimonials = [
 ];
 
 const Index = () => (
-  <div className="min-h-screen bg-white">
+  <div className="min-h-screen bg-background">
     {/* Hero */}
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       <img src={heroImage} alt="Delivery rider in rain" className="absolute inset-0 w-full h-full object-cover" />
