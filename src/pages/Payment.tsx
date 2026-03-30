@@ -151,7 +151,7 @@ const Payment = () => {
                       />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-1.5 block">Card Number</label>
+                      <label className="text-sm font-medium mb-1.5 block text-foreground">Card Number</label>
                       <Input
                         placeholder="1234 5678 9012 3456"
                         value={cardNumber}
