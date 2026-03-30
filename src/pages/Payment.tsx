@@ -162,7 +162,7 @@ const Payment = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="text-sm font-medium mb-1.5 block">Expiry</label>
+                        <label className="text-sm font-medium mb-1.5 block text-foreground">Expiry</label>
                         <Input
                           placeholder="MM/YY"
                           value={expiry}
