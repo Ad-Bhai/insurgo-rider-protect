@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle, Star } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 
 const plans = [
   {
@@ -38,7 +39,10 @@ const flexPlan = {
   features: ["₹150 payout per day", "Pay only when active", "No weekly commitment", "Ideal for part-time gig workers"],
 };
 
-const Pricing = () => (
+const Pricing = () => {
+  const { isLoggedIn } = useAuth();
+  const getLink = (plan: string) => isLoggedIn ? `/payment?plan=${plan}` : "/login";
+  return (
   <div className="min-h-screen pt-24">
     <section className="py-20">
       <div className="container">
@@ -78,7 +82,7 @@ const Pricing = () => (
                     </li>
                   ))}
                 </ul>
-                <Link to={`/payment?plan=${plan.name === "Lite Shield" ? "lite" : plan.name === "Smart Shield" ? "smart" : "pro"}`}>
+                <Link to={getLink(plan.name === "Lite Shield" ? "lite" : plan.name === "Smart Shield" ? "smart" : "pro")}>
                   <Button variant={plan.popular ? "hero" : "outline"} className="w-full" size="lg">
                     Get Started
                   </Button>
@@ -109,7 +113,7 @@ const Pricing = () => (
                   <span className="text-4xl font-display font-bold text-foreground">{flexPlan.price}</span>
                   <span className="text-muted-foreground">{flexPlan.period}</span>
                 </div>
-                <Link to="/payment?plan=flex">
+                <Link to={getLink("flex")}>
                   <Button variant="outline" className="mt-4 w-full sm:w-auto" size="lg">
                     Get Started
                   </Button>
@@ -121,6 +125,7 @@ const Pricing = () => (
       </div>
     </section>
   </div>
-);
+  );
+};
 
 export default Pricing;

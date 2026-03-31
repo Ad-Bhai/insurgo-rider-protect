@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Shield, CreditCard, Smartphone, CheckCircle, ArrowLeft, Lock } from "lucide-react";
 import { toast } from "@/components/ui/sonner";
+import { useAuth } from "@/hooks/useAuth";
 
 const planDetails: Record<string, { name: string; price: string; period: string; features: string[] }> = {
   lite: {
@@ -34,8 +35,16 @@ const planDetails: Record<string, { name: string; price: string; period: string;
 };
 
 const Payment = () => {
+  const { isLoggedIn } = useAuth();
   const [params] = useSearchParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      navigate("/login", { replace: true });
+    }
+  }, [isLoggedIn, navigate]);
+
   const planKey = params.get("plan") || "smart";
   const plan = planDetails[planKey] || planDetails.smart;
 
