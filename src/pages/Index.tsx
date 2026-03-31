@@ -31,7 +31,9 @@ const testimonials = [
   { name: "Arjun S.", role: "Bike Courier", text: "₹99/week is nothing compared to what I'd lose without protection. Best decision I've made.", rating: 5 },
 ];
 
-const Index = () => (
+const Index = () => {
+  const { isLoggedIn } = useAuth();
+  return (
   <div className="min-h-screen bg-background">
     {/* Hero */}
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
