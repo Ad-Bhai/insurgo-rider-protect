@@ -82,7 +82,7 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to={`/payment?plan=${plan.name === "Lite Shield" ? "lite" : plan.name === "Smart Shield" ? "smart" : "pro"}`}>
+                <Link to={getLink(plan.name === "Lite Shield" ? "lite" : plan.name === "Smart Shield" ? "smart" : "pro")}>
                   <Button variant={plan.popular ? "hero" : "outline"} className="w-full" size="lg">
                     Get Started
                   </Button>
