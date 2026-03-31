@@ -113,7 +113,7 @@ const Pricing = () => {
                   <span className="text-4xl font-display font-bold text-foreground">{flexPlan.price}</span>
                   <span className="text-muted-foreground">{flexPlan.period}</span>
                 </div>
-                <Link to="/payment?plan=flex">
+                <Link to={getLink("flex")}>
                   <Button variant="outline" className="mt-4 w-full sm:w-auto" size="lg">
                     Get Started
                   </Button>
