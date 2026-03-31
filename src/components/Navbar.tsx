@@ -34,7 +34,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220_20%_15%)] text-white backdrop-blur-2xl border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220_20%_15%)] dark:bg-[hsl(220_25%_20%)] text-white backdrop-blur-2xl border-b border-white/10">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
           <Shield className="h-7 w-7 text-primary" />
