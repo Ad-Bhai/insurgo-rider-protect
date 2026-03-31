@@ -90,7 +90,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[hsl(220_20%_15%)] border-t border-white/10 animate-fade-in">
+        <div className="md:hidden bg-[hsl(220_20%_15%)] dark:bg-[hsl(220_25%_20%)] border-t border-white/10 animate-fade-in">
           <div className="container py-4 flex flex-col gap-2">
             {navLinks.map((l) => (
               <Link
