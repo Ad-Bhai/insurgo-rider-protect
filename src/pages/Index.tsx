@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import { useAuth } from "@/hooks/useAuth";
 import {
   CloudRain, Thermometer, TrafficCone, Clock, ShieldCheck,
   Zap, Wallet, CheckCircle, Star, ArrowRight, Users, Award
@@ -30,7 +31,9 @@ const testimonials = [
   { name: "Arjun S.", role: "Bike Courier", text: "₹99/week is nothing compared to what I'd lose without protection. Best decision I've made.", rating: 5 },
 ];
 
-const Index = () => (
+const Index = () => {
+  const { isLoggedIn } = useAuth();
+  return (
   <div className="min-h-screen bg-background">
     {/* Hero */}
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -48,12 +51,25 @@ const Index = () => (
             Get weekly insurance for failed deliveries due to rain, traffic, roadblocks, or unexpected issues.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link to="/pricing">
-              <Button variant="hero" size="xl">Get Protected <ArrowRight className="ml-1 h-5 w-5" /></Button>
-            </Link>
-            <Link to="/how-it-works">
-              <Button variant="outline" size="xl">Learn More</Button>
-            </Link>
+            {isLoggedIn ? (
+              <>
+                <Link to="/dashboard">
+                  <Button variant="hero" size="xl">Dashboard <ArrowRight className="ml-1 h-5 w-5" /></Button>
+                </Link>
+                <Link to="/pricing">
+                  <Button variant="outline" size="xl">Plans</Button>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/pricing">
+                  <Button variant="hero" size="xl">Get Protected <ArrowRight className="ml-1 h-5 w-5" /></Button>
+                </Link>
+                <Link to="/how-it-works">
+                  <Button variant="outline" size="xl">Learn More</Button>
+                </Link>
+              </>
+            )}
           </div>
           <div className="flex items-center gap-6 mt-10 text-sm text-muted-foreground">
             <span className="flex items-center gap-2"><Users className="h-4 w-4 text-accent" /> 10,000+ Riders</span>
@@ -230,7 +246,8 @@ const Index = () => (
       </div>
     </section>
   </div>
-);
+  );
+};
 
 const Shield = ({ className }: { className?: string }) => (
   <ShieldCheck className={className} />
