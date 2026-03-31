@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import { CheckCircle, Star } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 
 const plans = [
   {

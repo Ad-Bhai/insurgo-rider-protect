@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Shield, CreditCard, Smartphone, CheckCircle, ArrowLeft, Lock } from "lucide-react";
 import { toast } from "@/components/ui/sonner";
+import { useAuth } from "@/hooks/useAuth";
 
 const planDetails: Record<string, { name: string; price: string; period: string; features: string[] }> = {
   lite: {
