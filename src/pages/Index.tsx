@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import { useAuth } from "@/hooks/useAuth";
 import {
   CloudRain, Thermometer, TrafficCone, Clock, ShieldCheck,
   Zap, Wallet, CheckCircle, Star, ArrowRight, Users, Award
