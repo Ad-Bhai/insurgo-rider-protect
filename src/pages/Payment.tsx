@@ -35,8 +35,16 @@ const planDetails: Record<string, { name: string; price: string; period: string;
 };
 
 const Payment = () => {
+  const { isLoggedIn } = useAuth();
   const [params] = useSearchParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      navigate("/login", { replace: true });
+    }
+  }, [isLoggedIn, navigate]);
+
   const planKey = params.get("plan") || "smart";
   const plan = planDetails[planKey] || planDetails.smart;
 

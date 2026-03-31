@@ -39,7 +39,10 @@ const flexPlan = {
   features: ["₹150 payout per day", "Pay only when active", "No weekly commitment", "Ideal for part-time gig workers"],
 };
 
-const Pricing = () => (
+const Pricing = () => {
+  const { isLoggedIn } = useAuth();
+  const getLink = (plan: string) => isLoggedIn ? `/payment?plan=${plan}` : "/login";
+  return (
   <div className="min-h-screen pt-24">
     <section className="py-20">
       <div className="container">
