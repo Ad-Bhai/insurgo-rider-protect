@@ -246,7 +246,8 @@ const Index = () => {
       </div>
     </section>
   </div>
-);
+  );
+};
 
 const Shield = ({ className }: { className?: string }) => (
   <ShieldCheck className={className} />
